@@ -43,7 +43,7 @@ class TestPost:
         assert timestamp == match.group()
 
     @mark.parametrize("computer_name, year, price, model, memory",
-                      [("Apple MacBook Pro 16", 2020, 1849.99, "Intel Core i9", "1 TB")])
+                      [("Apple MacBook Pro 16", 2020, 1849.99, "Intel Core i9", "1 TB ")])
     def test_post_response_inv(self, post_method, data_for_json, computer_name, year, price, model, memory):
         json_data = data_for_json
         json_data.pop("name")
