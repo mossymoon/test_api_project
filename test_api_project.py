@@ -57,7 +57,6 @@ class TestPost:
         assert response.json()["name"] is None
         assert response.json()["data"] is None
         print(response.json())
-        # print(utils.get_curl(response))
 
 
 class TestPut:
@@ -109,7 +108,6 @@ class TestGet:
         data = get_method_id
         data.params = {"id": id}
         assert data.json()[0]["id"] == str(id)
-        # print(utils.get_curl(data))
 
     @mark.parametrize("id", ["$£@!%$", "*&*^))(("])
     def test_get_all_id_inv(self, get_method_id, id):
